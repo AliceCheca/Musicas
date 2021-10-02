@@ -1,0 +1,46 @@
+// Teste da API REST - Músicas
+
+@baseURL = http://localhost:4000
+@id = 615870182bed410975bac22a
+
+###
+// GET - Listar todas as músicas
+GET {{baseURL}}/musicas
+Content-Type: application/json
+
+###
+// GET - Listar todas a música pelo ID. 
+GET {{baseURL}}/musicas/{{id}}
+Content-Type: application/json
+
+###
+// DELETE - Apaga uma música pelo seu ID. 
+DELETE {{baseURL}}/musicas/{{id}}
+Content-Type: application/json
+
+###
+// POST - Incluir uma nova Música.
+POST {{baseURL}}/musicas
+Content-Type: application/json
+
+{
+    "nome": "Alice",
+    "banda": "aaa",
+    "album": "aaa",
+    "lancamento": "aaa",
+    "genero": "aaa"
+}
+
+###
+// PUT - Altera uma música.
+PUT {{baseURL}}/musicas
+Content-Type: application/json
+
+{
+    "_id": "615870182bed410975bac22a",
+     "nome": "Vinicius",
+    "banda": "aaa",
+    "album": "aaa",
+    "lancamento": "aaa",
+    "genero": "aaa"
+}
